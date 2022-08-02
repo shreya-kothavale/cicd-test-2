@@ -284,7 +284,7 @@ view: cx_logs_extract {
     type: string
     sql: ${TABLE}.interactionid ;;
     html:  <a target="new"
-          href="https://tiaa.cloud.looker.com/dashboards/106?Interaction+ID={{ value }}&Call+ID={{cx_logs_extract.session_id._value}}"><button style="
+          href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::conversation_journey?Interaction+ID={{ value }}&Call+ID={{cx_logs_extract.session_id._value}}"><button style="
                 flex: 1 1 auto;
                 margin: 10px;
                 padding: 7px;
@@ -491,13 +491,13 @@ view: cx_logs_extract {
             <h1 style="color:#005495;" > Voice Bot Performance Analytics </h1>
             <div style="letter-spacing:0.3px;line-height:1;">
 
-        <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::voice_bot_performance_and_call_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
+        <a href="https://tiaa.cloud.looker.com/dashboards/@{model_name}::voice_bot_performance_and_call_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
         <font color="#005495" size="2"> Voice Bot Performance and Call Analytics &nbsp;</font></a>
 
-        <a href="/dashboards/test_bpa_model::user_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
+        <a href="/dashboards/@{model_name}::user_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
         <font color="#005495" size="2">|&nbsp; User Analytics &nbsp;</font></a>
 
-        <a href="/dashboards/test_bpa_model::action_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
+        <a href="/dashboards/@{model_name}::action_analytics?Date={{ _filters['cx_logs_extract.request_date'] | url_encode }}&Action={{ _filters['cx_logs_extract.intent_triggered'] | url_encode }}&Age={{ _filters['cx_logs_extract.age'] | url_encode }}&Employer={{ _filters['cx_logs_extract.employer'] | url_encode }}&Gender={{ _filters['cx_logs_extract.gender'] | url_encode }}&Tenure={{ _filters['cx_logs_extract.tenure'] | url_encode }}&Use+Case={{ _filters['cx_logs_extract.flowName'] | url_encode }}&Test+Mode={{ _filters['cx_logs_extract.testmode'] | url_encode }}">
         <font color="#005495" size="2">|&nbsp; Action Analytics &nbsp;</font></a>
 
         <font color="#129fd9" size="2">|&nbsp; Agent Transfer Analytics &nbsp;</font></a>

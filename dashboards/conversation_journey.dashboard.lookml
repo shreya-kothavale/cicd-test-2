@@ -86,23 +86,17 @@
       <h1 style="color:#005495;" > Voice Bot Performance Analytics </h1>
 
       <b>
-      <a href="https://tiaa.cloud.looker.com/dashboards/68">
+      <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::voice_bot_performance_and_call_analytics">
       <font color="#005495" size="2.5"> Voice Bot Performance and Call Analytics </font></a>
       &nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/67"> <font color="#005495" size="2.5"> User Analytics </font></a>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::user_analytics"> <font color="#005495" size="2.5"> User Analytics </font></a>
       &nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/65"><font color="#005495" size="2.5"> Action Analytics </font>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::action_analytics"><font color="#005495" size="2.5"> Action Analytics </font>
       </a>&nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/66"><font color="#005495" size="2.5"> Agent Transfer Analytics </font>
-      </a>&nbsp;&nbsp;|
-
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/73"><font color="#005495" size="2.5"> Call Flow [Sankey] </font>
-      </a>&nbsp;&nbsp;|
-
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/75"><font color="#005495" size="2.5"> Call Flow [Collapsible Tree] </font>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::agent_transfer_analytics"><font color="#005495" size="2.5"> Agent Transfer Analytics </font>
       </a>&nbsp;&nbsp;
 
       </b>
