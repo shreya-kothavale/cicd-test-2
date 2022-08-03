@@ -8,7 +8,7 @@
   elements:
   - title: Total Calls
     name: Total Calls
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.count_session]
@@ -51,7 +51,7 @@
     height: 2
   - title: Average Calls/Day
     name: Average Calls/Day
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.avg_session_per_day]
@@ -93,7 +93,7 @@
     height: 2
   - title: Average Requests/Call
     name: Average Requests/Call
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.avg_query_per_session]
@@ -136,7 +136,7 @@
     height: 2
   - title: Busiest Hour
     name: Busiest Hour
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.count_session, cx_logs_extract.time_bucket]
@@ -169,7 +169,7 @@
     height: 2
   - title: Voice Bot Success Rate
     name: Voice Bot Success Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.va_offer_rate, cx_logs_extract.count]
@@ -268,7 +268,7 @@
     height: 2
   - title: Average Voice Bot Handle Time
     name: Average Voice Bot Handle Time
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.avg_duration]
@@ -298,7 +298,7 @@
     height: 2
   - title: Weekly Traffic Distribution
     name: Weekly Traffic Distribution
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_bar
     fields: [cx_logs_extract.request_day_of_week, cx_logs_extract.count_session]
@@ -358,7 +358,7 @@
     height: 6
   - title: Hourly Traffic Distribution
     name: Hourly Traffic Distribution
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_line
     fields: [cx_logs_extract.count_session, cx_logs_extract.time_bucket]
@@ -435,7 +435,7 @@
     height: 2
   - title: ''
     name: " (2)"
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [cx_logs_session_level.duration_bucket, cx_logs_session_level.count_session,
@@ -563,7 +563,7 @@
     height: 5
   - title: Containment Rate
     name: Containment Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.containment_rate_excluding_AT]
@@ -657,7 +657,7 @@
     height: 2
   - title: Repeat Calls
     name: Repeat Calls
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [repeat_caller_flag.average_repeat_call_flag]
@@ -699,7 +699,7 @@
     height: 2
   - title: Navigation
     name: Navigation
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.dashboard_navigation_voice_bot_performance]
@@ -734,7 +734,7 @@
       type: advanced
       display: popover
       options: []
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.request_date
@@ -747,7 +747,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: [Date]
     field: cx_logs_extract.flowName

@@ -7,7 +7,7 @@
   elements:
   - title: Conversation Journey
     name: Conversation Journey
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [cx_logs_extract.interactionid, cx_logs_extract.session_id, cx_logs_extract.user_query,
@@ -86,17 +86,17 @@
       <h1 style="color:#005495;" > Voice Bot Performance Analytics </h1>
 
       <b>
-      <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::voice_bot_performance_and_call_analytics">
+      <a href="https://tiaa.cloud.looker.com/dashboards/@{model_name}::voice_bot_performance_and_call_analytics">
       <font color="#005495" size="2.5"> Voice Bot Performance and Call Analytics </font></a>
       &nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::user_analytics"> <font color="#005495" size="2.5"> User Analytics </font></a>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/@{model_name}::user_analytics"> <font color="#005495" size="2.5"> User Analytics </font></a>
       &nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::action_analytics"><font color="#005495" size="2.5"> Action Analytics </font>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/@{model_name}::action_analytics"><font color="#005495" size="2.5"> Action Analytics </font>
       </a>&nbsp;&nbsp;|
 
-      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/test_bpa_model::agent_transfer_analytics"><font color="#005495" size="2.5"> Agent Transfer Analytics </font>
+      &nbsp;&nbsp; <a href="https://tiaa.cloud.looker.com/dashboards/@{model_name}::agent_transfer_analytics"><font color="#005495" size="2.5"> Agent Transfer Analytics </font>
       </a>&nbsp;&nbsp;
 
       </b>
@@ -124,7 +124,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.interactionid
@@ -137,7 +137,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.session_id

@@ -8,7 +8,7 @@
   elements:
   - title: Action Analysis
     name: Action Analysis
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [cx_logs_extract.count, cx_logs_extract.count_session, cx_logs_extract.avg_confidence_score,
@@ -146,7 +146,7 @@
     height: 6
   - title: User Response
     name: User Response
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [cx_logs_extract.user_query, cx_logs_extract.count, cx_logs_extract.avg_confidence_score]
@@ -247,7 +247,7 @@
     height: 6
   - title: List of Interaction IDs, Call IDs and Journeys
     name: List of Interaction IDs, Call IDs and Journeys
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: table
     fields: [cx_logs_extract.interactionid, cx_logs_extract.session_id, cx_logs_extract.conversation_journey]
@@ -290,7 +290,7 @@
     height: 6
   - title: Initial Page Capture
     name: Initial Page Capture
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_bar
     fields: [cx_logs_session_level.count_session, cx_logs_session_level.entry_page]
@@ -360,7 +360,7 @@
     height: 6
   - title: Final Page Captured [Top 10]
     name: Final Page Captured [Top 10]
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_bar
     fields: [cx_logs_session_level.count_session, cx_logs_session_level.exit_page]
@@ -430,7 +430,7 @@
     height: 6
   - title: Step Before Final Page [Top 10]
     name: Step Before Final Page [Top 10]
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_bar
     fields: [cx_logs_session_level.count_session, cx_logs_session_level.second_last_exit_page]
@@ -483,7 +483,7 @@
     height: 6
   - title: Navigation
     name: Navigation
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.dashboard_navigation_action_analytics]
@@ -519,7 +519,7 @@
       type: advanced
       display: popover
       options: []
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.request_date
@@ -532,7 +532,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: [Date]
     field: cx_logs_extract.flowName

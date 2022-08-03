@@ -8,7 +8,7 @@
   elements:
   - title: Total Agent Transfers
     name: Total Agent Transfers
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.total_agent_transfer]
@@ -71,7 +71,7 @@
     height: 2
   - title: Agent Transfer Rate
     name: Agent Transfer Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.agent_routing_rate]
@@ -171,7 +171,7 @@
     height: 2
   - title: Caller Requested Transfers
     name: Caller Requested Transfers
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.caller_requested_agent_transfer_rate]
@@ -258,7 +258,7 @@
     height: 2
   - title: Agent Transfers by Day
     name: Agent Transfers by Day
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_column
     fields: [cx_logs_session_level.total_agent_transfer, cx_logs_session_level.flowName,
@@ -343,7 +343,7 @@
     height: 7
   - title: Agent Transfer Breakdown
     name: Agent Transfer Breakdown
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_pie
     fields: [cx_logs_session_level.Planned_Unplanned, cx_logs_session_level.count_session]
@@ -425,7 +425,7 @@
     height: 8
   - title: Total Calls
     name: Total Calls
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.count_session]
@@ -468,7 +468,7 @@
     height: 2
   - title: Deflected Rate
     name: Deflected Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.containment_rate]
@@ -561,7 +561,7 @@
     height: 2
   - title: Total Contained Calls
     name: Total Contained Calls
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.total_contained_calls]
@@ -591,7 +591,7 @@
     height: 2
   - title: Total Hung-Up Calls
     name: Total Hung-Up Calls
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.total_hung_up_calls]
@@ -622,7 +622,7 @@
     height: 2
   - title: Containment Rate
     name: Containment Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.containment_rate_excluding_AT]
@@ -653,7 +653,7 @@
     height: 2
   - title: Hung-Up Rate
     name: Hung-Up Rate
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_session_level.hung_up_rate]
@@ -684,7 +684,7 @@
     height: 2
   - title: Cause of Agent Transfer [Page name]
     name: Cause of Agent Transfer [Page name]
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [next_user_query.previous_page, next_user_query.count]
@@ -739,7 +739,7 @@
     height: 6
   - title: Navigation
     name: Navigation
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.dashboard_navigation_agent_transfer_analytics]
@@ -775,7 +775,7 @@
       type: advanced
       display: popover
       options: []
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.request_date
@@ -788,7 +788,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: [Date]
     field: cx_logs_extract.flowName

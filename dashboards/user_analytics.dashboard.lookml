@@ -8,7 +8,7 @@
   elements:
   - title: Voice Bot Average Sentiment Score
     name: Voice Bot Average Sentiment Score
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: marketplace_viz_radial_gauge::radial_gauge-marketplace
     fields: [cx_logs_extract.avg_sentiment_score]
@@ -91,7 +91,7 @@
     height: 6
   - title: Average Sentiment vs Weekdays
     name: Average Sentiment vs Weekdays
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_area
     fields: [cx_logs_extract.request_day_of_week, cx_logs_extract.avg_sentiment_score]
@@ -169,7 +169,7 @@
     height: 7
   - title: Total Requests
     name: Total Requests
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.count]
@@ -225,7 +225,7 @@
     height: 6
   - title: Unhandled Request Analysis
     name: Unhandled Request Analysis
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [cx_logs_extract.user_query, cx_logs_extract.count, cx_logs_extract.count_session,
@@ -316,7 +316,7 @@
     height: 7
   - title: User Requests Breakdown
     name: User Requests Breakdown
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_pie
     fields: [cx_logs_extract.query_breakdown, cx_logs_extract.count]
@@ -386,7 +386,7 @@
     height: 6
   - title: List of Interaction IDs, Call IDs and Journeys
     name: List of Interaction IDs, Call IDs and Journeys
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: table
     fields: [cx_logs_extract.interactionid, cx_logs_extract.session_id, cx_logs_extract.conversation_journey]
@@ -435,7 +435,7 @@
     height: 7
   - title: Voice Bot Response
     name: Voice Bot Response
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [next_user_query.redacted_bot_response, next_user_query.count]
@@ -499,7 +499,7 @@
     height: 7
   - title: Next User Request
     name: Next User Request
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
     fields: [next_user_query.count, next_user_query.bucket_next_user_query]
@@ -565,7 +565,7 @@
     height: 7
   - title: Average Sentiment, Total Calls vs Day of week
     name: Average Sentiment, Total Calls vs Day of week
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_column
     fields: [cx_logs_extract.avg_sentiment_score, cx_logs_extract.request_week, cx_logs_extract.count_session]
@@ -658,7 +658,7 @@
     height: 7
   - title: Navigation
     name: Navigation
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     type: single_value
     fields: [cx_logs_extract.dashboard_navigation_user_analytics]
@@ -694,7 +694,7 @@
       type: advanced
       display: popover
       options: []
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: []
     field: cx_logs_extract.request_date
@@ -707,7 +707,7 @@
     ui_config:
       type: tag_list
       display: popover
-    model: test_bpa_model
+    model: "@{model_name}"
     explore: cx_logs_extract
     listens_to_filters: [Date]
     field: cx_logs_extract.flowName
