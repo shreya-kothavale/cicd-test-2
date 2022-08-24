@@ -4,6 +4,7 @@ constant: connection_name {
   value: "tiaa_dev_looker_connection"
 }
 
+
 constant: model_name {
   value: "test_bpa_model"
 }
