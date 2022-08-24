@@ -2,6 +2,7 @@
 connection: "@{connection_name}"
 
 
+
 # include all the views
 include: "/views/**/*.view"
 include: "/dashboards/**/*.dashboard"
