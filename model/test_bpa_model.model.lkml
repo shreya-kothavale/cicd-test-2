@@ -1,6 +1,7 @@
 # Define the database connection to be used for this model.
 connection: "@{connection_name}"
 
+
 # include all the views
 include: "/views/**/*.view"
 include: "/dashboards/**/*.dashboard"
