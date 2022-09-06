@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+# on:
+#   # Triggers the workflow on push or pull request events but only for the "qa" branch
+#   push:
+#     branches: [ "qa" ]
+#   pull_request:
+#     branches: [ "qa" ]
+
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches: ["qa"]
+    
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo The PR was merged in ${{ github.ref_name }} branch > output.txt
+
