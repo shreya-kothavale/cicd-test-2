@@ -7,7 +7,7 @@
   preferred_slug: HAkjpf9adVkxgSVJZ2rz3w
   elements:
   - title: Action Analysis
-    name: Action Analysis
+    name: Action Analysis II
     model: "@{model_name}"
     explore: cx_logs_extract
     type: looker_grid
