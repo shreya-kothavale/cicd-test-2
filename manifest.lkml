@@ -9,7 +9,7 @@ constant: model_name {
 }
 
 constant: gcp_project {
-  value: "p-a0759636-st2-app-1cbe"
+  value: "p-a0759636-dev-app-1cbe"
 }
 
 constant: dataset {
