@@ -1,11 +1,11 @@
-project_name: "test_tiaa_bpa_dev"
+project_name: "test_tiaa_bpa_qa"
 
 constant: connection_name {
-  value: "tiaa_dev_looker_connection"
+  value: "tiaa_qa_looker_connection"
 }
 
 constant: model_name {
-  value: "test_bpa_model_dev"
+  value: "test_bpa_model_qa"
 }
 
 constant: gcp_project {
@@ -13,5 +13,5 @@ constant: gcp_project {
 }
 
 constant: dataset {
-  value: "tiaa_dev_bpa_analytics_dataset"
+  value: "tiaa_qa_bpa_analytics_dataset"
 }
