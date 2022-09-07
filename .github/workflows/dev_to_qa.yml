@@ -40,7 +40,7 @@ jobs:
       - name: save current date
         run: |
           # do some operation that changes a file in the git repo
-          cat > $manifest <<- EOM
+          read -r -d '' manifest <<- EOM
           project_name: "test_tiaa_bpa_qa"
           ## test
           constant: connection_name {
