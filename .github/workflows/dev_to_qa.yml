@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI_qa
 
 # Controls when the workflow will run
 # on:
@@ -26,5 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo The PR was merged in ${{ github.ref_name }} branch > output.txt
+        echo "The PR was merged in ${{ github.ref_name }} branch" 
+        cat manifest.lkml
+        
 
