@@ -20,13 +20,38 @@ on:
     branches: ["qa"]
     
 
+# jobs:
+#   if_merged:
+#     if: github.event.pull_request.merged == true
+#     runs-on: ubuntu-latest
+#     steps:
+#     - run: |
+#         echo "The PR was merged in ${{ github.ref_name }} branch" 
+#         cat manifest.lkml
+      
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  date:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "The PR was merged in ${{ github.ref_name }} branch" 
-        cat manifest.lkml
-        
+      # Checkout the branch
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: save current date
+        run: |
+          # do some operation that changes a file in the git repo
+          date > time.txt
+
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add time.txt
+          git commit -m "new date commit"
+          git push origin qa
 
